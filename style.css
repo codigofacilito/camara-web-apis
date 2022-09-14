@@ -1,0 +1,86 @@
+*{
+  box-sizing: border-box;
+}
+.camara{
+  position: relative;
+  display: inline-block;
+  width: 600px;
+  aspect-ratio: 9/16;
+  overflow: hidden;
+}
+
+.app-controls{
+  text-align: right;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: ". . . . . buttons"
+                       ". . . . . buttons"
+                       ". . . . . buttons"
+                       ". . . . . buttons"
+                       ". . . . . buttons"
+                       "shutter shutter shutter shutter shutter shutter";
+
+  
+  padding: 0.5em;
+}
+
+.app-controls .buttons{
+  grid-area: buttons;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.app-controls .shutter{
+  grid-area: shutter;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.app-controls .material-icons{
+  font-size: 36px;
+  color: white;
+}
+
+.app-controls button{
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0;
+  padding:8px;
+  border-radius: 8px;
+}
+.camara video{
+  z-index: 0;
+}
+.camara canvas{
+  /* position: relative; */
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  /* width: 100%;
+  height: 100%;
+  object-fit: cover; */
+  border: solid 1px red;
+}
+
+.camara-switch{
+  /* grid-row: 1 / 2; */
+  grid-column: 2 /3;
+  
+}
+
+.camera-shutter{
+  grid-row: 2 / 3;
+  
+}

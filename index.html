@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- import material icons from cdn -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Cámara web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="camara">
+    <div class="app-controls">
+      <div class="buttons">
+        <button class="camara-switch">
+          <span class="material-icons">
+            cameraswitch
+          </span>
+        </button>
+      </div>
+      <div class="shutter">
+        <button class="camera-shutter">
+          <span class="material-icons">
+            cameraswitch
+          </span>
+        </button>
+      </div>
+      
+    </div>
+    
+    <canvas id="canvas"></canvas>
+    <video id="video-source"></video>
+  </div>
+
+  <div class="text">
+    <form action="#" id="addTextForm">
+      <input type="text" name="" id="mensaje">
+      <button>Añadir</button>
+    </form>
+  </div>
+
+  
+  
+  
+  <script src="app.js"></script>
+</body>
+</html>
